@@ -1,0 +1,9 @@
+version: '3'
+services:
+  recognition_server:
+    container_name: gado_recognition_server
+    build: recognition_server
+    restart: "unless-stopped"
+    network_mode: "host"
+    volumes:
+      - ./debug:/debug
